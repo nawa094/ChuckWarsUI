@@ -2,7 +2,7 @@
   "runtime": "NetCore31",
   "documentGenerator": {
     "fromDocument": {
-      "url": "https://localhost:7223/swagger/v1/swagger.json"
+      "url": "https://chuck-wars-api.azurewebsites.net/swagger/v1/swagger.json"
     }
   },
   "codeGenerators": {
