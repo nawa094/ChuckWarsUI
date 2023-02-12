@@ -1,0 +1,12 @@
+C:\Users\mumbw\Documents\Course Work\Blazor\ChuckSwapiChallenge\CWWebAss\ChuckWarsUI\ChuckWarsUI.Integration.ChuckWarsApi\bin\Debug\net6.0\ChuckWarsUI.Integration.ChuckWarsApi.deps.json
+C:\Users\mumbw\Documents\Course Work\Blazor\ChuckSwapiChallenge\CWWebAss\ChuckWarsUI\ChuckWarsUI.Integration.ChuckWarsApi\bin\Debug\net6.0\ChuckWarsUI.Integration.ChuckWarsApi.dll
+C:\Users\mumbw\Documents\Course Work\Blazor\ChuckSwapiChallenge\CWWebAss\ChuckWarsUI\ChuckWarsUI.Integration.ChuckWarsApi\bin\Debug\net6.0\ChuckWarsUI.Integration.ChuckWarsApi.pdb
+C:\Users\mumbw\Documents\Course Work\Blazor\ChuckSwapiChallenge\CWWebAss\ChuckWarsUI\ChuckWarsUI.Integration.ChuckWarsApi\obj\Debug\net6.0\ChuckWarsUI.Integration.ChuckWarsApi.csproj.AssemblyReference.cache
+C:\Users\mumbw\Documents\Course Work\Blazor\ChuckSwapiChallenge\CWWebAss\ChuckWarsUI\ChuckWarsUI.Integration.ChuckWarsApi\obj\Debug\net6.0\ChuckWarsUI.Integration.ChuckWarsApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mumbw\Documents\Course Work\Blazor\ChuckSwapiChallenge\CWWebAss\ChuckWarsUI\ChuckWarsUI.Integration.ChuckWarsApi\obj\Debug\net6.0\ChuckWarsUI.Integration.ChuckWarsApi.AssemblyInfoInputs.cache
+C:\Users\mumbw\Documents\Course Work\Blazor\ChuckSwapiChallenge\CWWebAss\ChuckWarsUI\ChuckWarsUI.Integration.ChuckWarsApi\obj\Debug\net6.0\ChuckWarsUI.Integration.ChuckWarsApi.AssemblyInfo.cs
+C:\Users\mumbw\Documents\Course Work\Blazor\ChuckSwapiChallenge\CWWebAss\ChuckWarsUI\ChuckWarsUI.Integration.ChuckWarsApi\obj\Debug\net6.0\ChuckWarsUI.Integration.ChuckWarsApi.csproj.CoreCompileInputs.cache
+C:\Users\mumbw\Documents\Course Work\Blazor\ChuckSwapiChallenge\CWWebAss\ChuckWarsUI\ChuckWarsUI.Integration.ChuckWarsApi\obj\Debug\net6.0\ChuckWarsUI.Integration.ChuckWarsApi.dll
+C:\Users\mumbw\Documents\Course Work\Blazor\ChuckSwapiChallenge\CWWebAss\ChuckWarsUI\ChuckWarsUI.Integration.ChuckWarsApi\obj\Debug\net6.0\refint\ChuckWarsUI.Integration.ChuckWarsApi.dll
+C:\Users\mumbw\Documents\Course Work\Blazor\ChuckSwapiChallenge\CWWebAss\ChuckWarsUI\ChuckWarsUI.Integration.ChuckWarsApi\obj\Debug\net6.0\ChuckWarsUI.Integration.ChuckWarsApi.pdb
+C:\Users\mumbw\Documents\Course Work\Blazor\ChuckSwapiChallenge\CWWebAss\ChuckWarsUI\ChuckWarsUI.Integration.ChuckWarsApi\obj\Debug\net6.0\ref\ChuckWarsUI.Integration.ChuckWarsApi.dll

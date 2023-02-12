@@ -1,0 +1,65 @@
+﻿@page "/search"
+@inject IClient _client;
+
+<div>
+<EditForm Model="@Model" OnSubmit="@HandleSubmit">
+
+    <div class="wrap">
+        <div class="search">
+            <InputText @bind-Value="Model.Query" type="text" class="searchTerm" placeholder="What are you looking for?" />
+            <button type="submit" class="searchButton">
+                Search
+            </button>
+        </div>
+    </div>
+</EditForm>
+</div>
+
+
+<div >
+    @if (_searchResultModel != null)
+    {
+        @if (!_searchResultModel.ChuckNorrisResults.Result.Any())
+        {
+            <p>No Joke results</p>
+        }
+
+        @if (!_searchResultModel.SwApiResults.Results.Any())
+        {
+            <p>No Star Wars results</p>
+        }
+
+        <div class="card-grid" style="padding:15px">
+            @foreach(var person in _searchResultModel.SwApiResults.Results)
+            {
+                <_PersonComponent Person="person"></_PersonComponent>
+            }
+
+            @foreach (var joke in _searchResultModel.ChuckNorrisResults.Result)
+            {
+                <_JokeComponent JokeModel="joke"></_JokeComponent>
+            }
+        </div>
+        
+    }
+</div>
+
+
+
+@code {
+    public SearchModel Model = new();
+    private SearchResultModel? _searchResultModel;
+
+    public async Task HandleSubmit()
+    {
+        if (!string.IsNullOrEmpty(Model.Query))
+        {
+            _searchResultModel = await _client.Search2Async(Model.Query);
+        }
+    }
+
+    public class SearchModel
+    {
+        public string Query { get; set; } = string.Empty;
+    }
+}

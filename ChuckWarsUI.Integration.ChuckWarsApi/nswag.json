@@ -1,0 +1,18 @@
+{
+  "runtime": "NetCore31",
+  "documentGenerator": {
+    "fromDocument": {
+      "url": "https://localhost:7223/swagger/v1/swagger.json"
+    }
+  },
+  "codeGenerators": {
+    "openApiToCSharpClient": {
+      "className": "{controller}Client",
+      "output": "ChuckWarsClient.g.cs",
+      "namespace": "ChuckWarsUI.Integration.ChuckWarsApi",
+      "generateClientInterfaces": true,
+      "injectHttpClient": false,
+      "disposeHttpClient": true
+    }
+  }
+}

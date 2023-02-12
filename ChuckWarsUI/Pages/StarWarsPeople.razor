@@ -1,0 +1,61 @@
+﻿@page "/starwarspeople"
+@inject IClient client
+
+@if(People != null)
+{
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+            <li class="page-item"><button class="page-link" @onclick="Previous">Previous</button></li>
+            @for (int i = 1; i <= Pages; i++)
+            {
+                var j = i;
+                <li class="page-item"><button type="button" class="page-link @(_currentpage == j ? "active" : "")" value="@i" @onclick="() => FetchPage(j)">@i</button>
+
+                </li>
+            }
+            <li class="page-item"><button class="page-link" @onclick="Next">Next</button></li>
+      </ul>
+    </nav>
+    <p>Page Number : @_currentpage/@Pages</p>
+    <div class="card-grid">
+        @foreach (var person in People.Results)
+        {
+            <_PersonComponent Person="person"></_PersonComponent>
+        }
+    </div>
+}
+
+@code {
+    public PeopleModel? People { get; set; }
+    public int Pages { get; set; }
+    private int _currentpage = 1;
+
+    protected override async Task OnInitializedAsync()
+    {
+        People = await client.PeopleAsync(_currentpage);
+        Pages = (int)Math.Ceiling((decimal)People.Count / 10);
+    }
+
+    public async Task Previous()
+    {
+        if (_currentpage == 1)
+            return;
+        _currentpage--;
+        People = await client.PeopleAsync(_currentpage);
+    }
+
+    public async Task Next()
+    {
+        if (_currentpage == Pages)
+            return;
+
+        _currentpage++;
+        People = await client.PeopleAsync(_currentpage);
+    }
+
+    public async Task FetchPage(int pageNumber)
+    {
+        People = await client.PeopleAsync(pageNumber);
+        _currentpage = pageNumber;
+    }
+}

@@ -1,0 +1,26 @@
+﻿<div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <h5 class="card-title">@Person.Name</h5>
+    <h6 class="card-subtitle mb-2 text-muted">@Person.BirthYear</h6>
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item">Mass: @Person.Mass</li>
+    <li class="list-group-item">Height: @Person.Height</li>
+    <li class="list-group-item">Eye Color: @Person.EyeColor</li>
+  </ul>
+    
+    <a href="@Person.Url" class="card-link">View Url</a>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public PersonModel Person { get; set; }
+
+    protected override void OnInitialized()
+    {
+        if (Person == null)
+        {
+            throw new ArgumentException("Person model is required");
+        }
+    }
+}

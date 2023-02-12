@@ -1,0 +1,21 @@
+﻿<div class="card p-2" style="width: 18rem">
+    <!-- <img class="card-img-top" src=@JokeModel.IconUrl alt="Card image cap"> images not working -->
+  <div class="card-body">
+    <p class="card-text">@JokeModel.Value</p>
+    <a href="@JokeModel.Url" class="btn btn-primary">Visit ChuckNorris.IO</a>
+  </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public ChuckJokeModel JokeModel { get; set; }
+
+    protected override void OnInitialized()
+    {
+        if (JokeModel == null)
+        {
+            throw new ArgumentException("Joke model is required");
+        }
+    }
+}

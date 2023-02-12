@@ -1,0 +1,48 @@
+﻿@page "/"
+@inject IClient client;
+
+<PageTitle>Joke Categories</PageTitle>
+<div class="container">
+    <div>
+        <h1>Select A Category to get a Joke!</h1>
+    </div>
+
+    @if (Categories.Any())
+    {
+        <div class="btn-group" style="display:table">
+            @foreach (var category in Categories)
+            {
+                <button type="button" class="btn btn-primary" value="@category" @onclick="() => GetRandomJoke(category)">@category</button>
+            }
+        </div>
+    }
+
+    @if (Joke != null)
+    {
+        <div class="p-4" style="position:absolute; left:50%">
+            <div >
+                <_JokeComponent JokeModel="@Joke" />
+            </div>
+        </div>
+    }
+</div>
+
+
+@code {
+    public List<string> Categories { get; set; } = new();
+    public ChuckJokeModel? Joke = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var categoryResponse = await client.CategoriesAsync();
+
+        Categories = categoryResponse.Categories.ToList();
+        
+    }
+
+    public async Task GetRandomJoke(string category)
+    {
+        Joke = await client.RandomJokeAsync(category);
+        
+    }
+}
