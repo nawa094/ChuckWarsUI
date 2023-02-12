@@ -16,6 +16,6 @@
 	</ItemGroup>
 	
 	<Target Name="GenerateSdk" BeforeTargets="Build">
-		<Exec Command="$(NSwagExe_Core31) run nswag.json " />
+		<Exec Command="$(NSwagExe_Net60) run nswag.json " />
 	</Target>
 </Project>
